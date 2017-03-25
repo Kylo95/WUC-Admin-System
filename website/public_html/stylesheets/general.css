@@ -1,0 +1,217 @@
+html {
+	height: 100%;
+
+}
+
+body {
+	margin: 0px;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	font-size: 18px;
+	height: 100%;
+}
+
+header {
+	height: 110px;
+	padding: 10px;
+    background-color: rgb(188, 255, 223);
+	box-shadow: 0px 0px 10px #888888;
+	background-repeat: no-repeat;
+	background-image: url("../images/wucBackground.png");
+	position: fixed;
+	z-index: 11;
+	width: 100%;
+	min-width: 1100px;
+}
+
+#headerLeft {
+	text-align: left;
+	width: calc( 50% - 10px );
+	display: inline-block;
+	
+}
+
+#headerRight {
+	text-align: right;
+	width: calc( 50% - 10px );
+	display: inline-block;
+	position: relative;
+	top: -10px;
+}
+
+h1 {
+	font-size: 40px;
+	position: relative;
+	top: -10px;
+	left: 80px;
+	display: inline;
+}
+
+h2 {
+	font-size: 40px;
+	font-style: italic;
+}
+
+h3 {
+	font-size: 40px;
+}
+
+#sideBar {
+	text-align: center;
+	width: 152px;
+	background-color: #cef2fd;
+	float: left;
+	height: calc( 100% - 130px );
+	box-shadow: 0px 0px 10px #888888;
+	position: fixed;
+	z-index: 10;
+	top: 130px;
+}
+
+#topBar {
+	text-align: center;
+	width: calc( 100% - 152px );
+	position: fixed;
+	z-index: 11;
+	top: 130px;
+	left: 152px;
+	min-width: 900px;
+}
+
+#mainContent {
+	width: calc( 100% - 212px );
+	position: relative;
+	z-index: 9;
+	left: 152px;
+	top: 130px;
+	padding: 30px;
+	min-width: 888px;
+}
+
+.textBoxSideLabel {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+	
+}​
+
+#mainContentNoSide {
+	width: calc(100% - 60px);
+	position: relative;
+	z-index: 9;
+	top: 130px;
+	padding: 30px;
+	min-width: 1100px;
+}
+
+.sidebutton {
+	width: 152px;
+	height: calc(12.5%);
+	min-height: 50px;
+	border: 1px solid black;
+	border-bottom: 0px;
+	background-color: #cef2fd;
+}
+.userbutton{
+	width: 250px;
+	height: 40px;
+}
+
+.topButton {
+	width: 150px;
+	border: 1px solid black;
+	top: -1px;
+	height: 25px;
+	position: relative;
+	background-color: #cef2fd;
+	border-top: 0px;
+}
+
+.sidebutton:hover, .topButton:hover {
+	cursor: pointer;
+	background-color: #eefbff;
+}
+
+
+#logo {
+	height: 110px; 
+	box-shadow: 0px 0px 10px #888888;
+}
+
+#dynamicBox {
+	width: 648px;
+	height: 480px;
+	background-color: #cef2fd;
+    margin: auto;
+}
+
+#backbutton {
+	background-image: url("../images/previous_page.png");
+	background-repeat: no-repeat;
+	min-width: 123px;
+	height: 41px;
+	display: inline-block;
+	font-size: 25px;
+	color: black;
+	padding-top: 7px;
+	padding-left: 60px;
+	font-weight: bold;
+}
+
+.table th {
+	background-color: #cef2fd;
+	color: black;
+}
+
+.table th, .table td {
+	max-width: 300px;
+	min-width: 100px;
+}
+
+.table th, .table td, .table tr {
+	border: 1px solid black;
+	padding: 5px;
+}
+.table {
+	
+	border: 1px solid black;
+	border-spacing: 0px;
+	margin-left:auto; 
+    margin-right:auto;
+}
+
+.labelline {
+	display: inline-block;
+	width: 150px;
+	position: relative;
+	left:-155px;
+	text-align: right;
+}
+
+.columnDiv {
+	width: 150px;
+	display:inline-block;
+	text-align: center;
+}
+
+.announcement {
+	min-height: 100px;
+	background-color: #cef2fd;
+	border: 1px solid black;
+}
+
+.announcementHeader {
+	text-align: right;
+	background-color: #8fe5ff;
+	padding: 2px;
+	height: 21px;
+}
+
+.announcementBody {
+	text-align: left;
+	padding: 10px;
+}
+
+a {
+	text-decoration : none; 
+	color : #000;
+}
