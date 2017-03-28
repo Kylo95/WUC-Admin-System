@@ -17,8 +17,8 @@
 		</header>
 		<?php if (isset($_SESSION['priv']) && $_SESSION['priv'] == 2){ ?>
 		<div id="sideBar">
-			<button class="sidebutton"><a href="StudentSearch">Existing Student Management</a></li>
-			<button class="sidebutton"><a href=" EnrolStudent">Enrol Student</a></li>
+			<button class="sidebutton"><a href="studentmanagment">Student Management</a></li>
+			<button class="sidebutton"><a href=" coursemanagement">Course Management</a></li>
 			<button class="sidebutton"><a href="timetablemanagement">Timetable Management</a></li>
 			<button class="sidebutton"><a href="entergrades2">Grade Management</a></li>
 			<button class="sidebutton"><a href="attendancetracker">Track Attendance</a></li>
