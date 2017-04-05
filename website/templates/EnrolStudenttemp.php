@@ -96,6 +96,7 @@
 </html>
 <?php
 
+
 	if (isset($_POST['submit'])) {
 		
 	 $grades = $pdo->prepare('INSERT INTO students (entry_qualifications) 
