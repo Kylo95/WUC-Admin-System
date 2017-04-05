@@ -21,8 +21,14 @@
 				<label class="textBoxSideLabel" for="id">Student_ID:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['student_id']?></label> <br /><br />
 				<label class="textBoxSideLabel" for="firstname">First_Name:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['firstname']?></label><br /><br />
 				<label class="textBoxSideLabel" for="surname">Surname:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['surname']?></label><br /><br />
-				<label class="textBoxSideLabel" for="termaddress">Term_address:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['term_address_line1']?></label><br /><br />
-				<label class="textBoxSideLabel" for="nontermaddress">Non_Term_Address:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['home_address_line1']?></label><br /><br />
+				<label class="textBoxSideLabel" for="termaddressline1">Term_address_line1:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['term_address_line1']?></label><br /><br />
+				<label class="textBoxSideLabel" for="termaddressline2">Term_address_line2:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['term_address_line2']?></label><br /><br />
+				<label class="textBoxSideLabel" for="termaddresspostcode">Term_address_postcode:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['term_address_postcode']?></label><br /><br />
+				<label class="textBoxSideLabel" for="termaddresscounty">Term_address_county:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['term_address_county']?></label><br /><br />
+				<label class="textBoxSideLabel" for="termaddressline1">Home_address_line1:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['home_address_line1']?></label><br /><br />
+				<label class="textBoxSideLabel" for="homeaddressline2">Home_address_line2:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['home_address_line2']?></label><br /><br />
+				<label class="textBoxSideLabel" for="homeaddresspostcode">Home_address_postcode:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['home_address_postcode']?></label><br /><br />
+				<label class="textBoxSideLabel" for="homeaddresscounty">Home_address_county:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['home_address_county']?></label><br /><br />
 				<label class="textBoxSideLabel" for="telephone">Telephone_Number:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['telephone_number']?></label> <br /><br />
 				<label class="textBoxSideLabel" for="email">Email_Address:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['email_address']?></label> <br /><br />
 				<label class="textBoxSideLabel" for="coursecode">Course_Code:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['course_code']?></label> <br /><br />
