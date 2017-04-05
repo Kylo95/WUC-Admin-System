@@ -12,31 +12,31 @@
 				<img src="images/wucLogo.png" id="logo" />
 				<h1>Administration System</h1>
 			</div><div id="headerRight">
-				<button style="width: 80px; height: 30px;"><a href="logout">Logout</a></button>
+				<?php if(isset($_SESSION['user'])) echo('<button style="width: 80px; height: 30px;"><a href="logout">Logout</button></a>'); ?>
 			</div>
 		</header>
 		<?php if (isset($_SESSION['priv']) && $_SESSION['priv'] == 2){ ?>
 		<div id="sideBar">
-			<button class="sidebutton"><a href="studentmanagment">Student Management</a></li>
-			<button class="sidebutton"><a href=" coursemanagement">Course Management</a></li>
-			<button class="sidebutton"><a href="timetablemanagement">Timetable Management</a></li>
-			<button class="sidebutton"><a href="entergrades2">Grade Management</a></li>
-			<button class="sidebutton"><a href="attendancetracker">Track Attendance</a></li>
+			<a href="studentmanagment"><button class="sidebutton">Student Management</button></a>
+			<a href=" coursemanagement"><button class="sidebutton">Course Management</button></a>
+			<a href="timetablemanagement"><button class="sidebutton">Timetable Management</button></a>
+			<a href="entergrades2"><button class="sidebutton">Grade Management</button></a>
+			<a href="attendancetracker"><button class="sidebutton">Track Attendance</button></a>
 			<button class="sidebutton">Diary Management</button>
-			<button class="sidebutton"><a href="announcements">Announcements</a></li>
-			<button class="sidebutton"><a href="AddDeleteUser">Add/Delete User</a></li>			
+			<a href="announcements"><button class="sidebutton">Announcements</button></a>
+			<a href="AddDeleteUser"><button class="sidebutton">Add/Delete User</button></a>			
 		</div>
 		<?php } ?>
 		<?php if (isset($_SESSION['priv']) && $_SESSION['priv'] == 1){ ?>
 		<div id="sideBar">
-			<button class="sidebutton">Existing Student Management</li>
-			<button class="sidebutton">Enrol Student</li>
-			<button class="sidebutton">Timetable Management</li>
-			<button class="sidebutton">Grade Management</li>
-			<button class="sidebutton"><a href="attendancetracker">Track Attendance</a></li>
+			<button class="sidebutton">Existing Student Management</button>
+			<button class="sidebutton">Enrol Student</button>
+			<button class="sidebutton">Timetable Management</button>
+			<button class="sidebutton">Grade Management</button>
+			<a href="attendancetracker"><button class="sidebutton">Track Attendance</button></a>
 			<button class="sidebutton">Diary Management</button>
-			<button class="sidebutton"><a href="announcements">Announcements</a></li>
-			<button class="sidebutton">Add/Delete User</li>			
+			<a href="announcements"><button class="sidebutton">Announcements</button></a>
+			<button class="sidebutton">Add/Delete User</button>			
 		</div>
 		<?php } ?>
 		<div id="mainContent" style="text-align: center">
