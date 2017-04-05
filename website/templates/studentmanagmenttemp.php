@@ -9,7 +9,7 @@
 					<a href="EnrolStudent"><button style="width: 250px; height: 40px";>Enrol Student</button></a><br /><br />
 					- or -<br /><br />
 					
-					<a href="StudentSearch"><button style="width: 250px; height: 40px";>Existing Student Management</button></a>
+					<a href="StudentDetails"><button style="width: 250px; height: 40px";>Existing Student Management</button></a>
 				
 			</div>
 		</div>

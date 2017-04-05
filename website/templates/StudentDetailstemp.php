@@ -1,45 +1,56 @@
-<?php
+			<?php
+				if (isset($_GET['studentid']) && !empty($_GET['studentid']))
+				{
+					$studentDetails = new DatabaseTable($pdo, 'students');
+					
+					$record = [
+					'student_id' => $_GET['studentid']
+					];
 
-	if (isset($_GET['studentid'])) {
-		$studentDetails = new DatabaseTable($pdo, 'students');
-		$record = [
-		'student_id' => $_GET['studentid']
-
-		];
-
-		$row = $studentDetails->find($record)->fetch();
-																			
-	?>
-		<div id="topBar">
-			<button class="topButton"><a href="Studentdetails<?php echo('?studentid=' . $_GET['studentid'] ); ?>">View</a></button><button class="topButton"><a href="amendstudent<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Amend</a></button><button class="topButton"><a href="viewstudentgrades<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Grades</a></button><button class="topButton"><a href="viewstudenttimetable<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Timetable</a></button><button class="topButton"><a href="resetstudentpassword<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Password</a></button>
-		</div>
-		<u><h1><head>Student Details</head></h1></u>
-		</br></br>
-		<form>
-				<label class="textBoxSideLabel" for="id">Student_ID:</label><label><?php echo $row['student_id']?></label> <br /><br />
-				<label class="textBoxSideLabel" for="firstname">First_Name:</label><label><?php echo $row['firstname']?></label><br /><br />
-				<label class="textBoxSideLabel" for="surname">Surname:</label><label><?php echo $row['surname']?></label><br /><br />
-				<label class="textBoxSideLabel" for="termaddress">Term_address:</label><label><?php echo $row['term_address_line1']?></label><br /><br />
-				<label class="textBoxSideLabel" for="nontermaddress">Non_Term_Address:</label><label><?php echo $row['home_address_line1']?></label><br /><br />
-				<label class="textBoxSideLabel" for="telephone">Telephone_Number:</label><label><?php echo $row['telephone_number']?></label> <br /><br />
-				<label class="textBoxSideLabel" for="email">Email_Address:</label><label><?php echo $row['email_address']?></label> <br /><br />
-				<label class="textBoxSideLabel" for="coursecode">Course_Code:</label><label><?php echo $row['course_code']?></label> <br /><br />
-				<label class="textBoxSideLabel" for="status">Student_Status:</label><label><?php echo $row['student_status']?></label> <br /><br />
-				<label class="textBoxSideLabel" for="tutor">Personal_Tutor:</label><label><?php echo $row['personal_tutor']?></label> <br /><br />
-				<label class="textBoxSideLabel" for="entrygrades">Entry_Grades:</label><label><?php echo $row['entry_qualifications']?></label> <br /><br />
+					$row = $studentDetails->find($record)->fetch();
+					
+					if(!empty($row))
+					{
+			?>
+			<div id="topBar">
+				<button class="topButton"><a href="Studentdetails<?php echo('?studentid=' . $_GET['studentid'] ); ?>">View</a></button><button class="topButton"><a href="amendstudent<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Amend</a></button><button class="topButton"><a href="viewstudentgrades<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Grades</a></button><button class="topButton"><a href="viewstudenttimetable<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Timetable</a></button><button class="topButton"><a href="resetstudentpassword<?php echo('?studentid=' . $_GET['studentid'] ); ?>">Password</a></button>
+			</div>
+			<h2>Student Details</h2>
+			</br></br>
+			<form>
+				<label class="textBoxSideLabel" for="id">Student_ID:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['student_id']?></label> <br /><br />
+				<label class="textBoxSideLabel" for="firstname">First_Name:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['firstname']?></label><br /><br />
+				<label class="textBoxSideLabel" for="surname">Surname:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['surname']?></label><br /><br />
+				<label class="textBoxSideLabel" for="termaddress">Term_address:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['term_address_line1']?></label><br /><br />
+				<label class="textBoxSideLabel" for="nontermaddress">Non_Term_Address:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['home_address_line1']?></label><br /><br />
+				<label class="textBoxSideLabel" for="telephone">Telephone_Number:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['telephone_number']?></label> <br /><br />
+				<label class="textBoxSideLabel" for="email">Email_Address:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['email_address']?></label> <br /><br />
+				<label class="textBoxSideLabel" for="coursecode">Course_Code:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['course_code']?></label> <br /><br />
+				<label class="textBoxSideLabel" for="status">Student_Status:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['student_status']?></label> <br /><br />
+				<label class="textBoxSideLabel" for="tutor">Personal_Tutor:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['personal_tutor']?></label> <br /><br />
+				<label class="textBoxSideLabel" for="entrygrades">Entry_Grades:</label> <label class="textBoxSideLabel" style="text-align:left"><?php echo $row['entry_qualifications']?></label> <br /><br />
 			</form>
 		</div>
 	</body>
 </html>
-<?php
-													
-}
-else
-	echo('<p> </p>');
-
-
-?>	
-		
+<?php				
+		}
+		else
+		{
+			$error = 1;
+			echo('<p>Student not found.</p>');
+		}
+	}
+	else
+	{
+		$error = 1;
+		if(isset($_GET['studentid']))
+			echo('<p>Please do not leave the search query empty.</p>');
+	}
+	
+	if(isset($error))
+	{
+?>
 			<div id="dynamicBox" style="width: 648px; height: 480px;">
 				<br />
 				<br />
@@ -55,5 +66,6 @@ else
 		</div>
 	</body>
 </html>
-
+<?php
+	}
 ?>
