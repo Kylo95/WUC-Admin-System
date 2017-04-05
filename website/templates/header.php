@@ -20,7 +20,7 @@
 			<a href="studentmanagment"><button class="sidebutton">Student Management</button></a>
 			<a href=" coursemanagement"><button class="sidebutton">Course Management</button></a>
 			<a href="timetablemanagement"><button class="sidebutton">Timetable Management</button></a>
-			<a href="entergrades2"><button class="sidebutton">Grade Management</button></a>
+			<a href="entergrades"><button class="sidebutton">Grade Management</button></a>
 			<a href="attendancetracker"><button class="sidebutton">Track Attendance</button></a>
 			<button class="sidebutton">Diary Management</button>
 			<a href="announcements"><button class="sidebutton">Announcements</button></a>
