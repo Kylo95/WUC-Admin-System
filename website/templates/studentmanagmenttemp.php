@@ -6,10 +6,10 @@
 				<br />
 				
 					<br />
-					<button style="width: 250px; height: 40px";><a href="EnrolStudent">Enrol Student</a></button><br /><br />
+					<a href="EnrolStudent"><button style="width: 250px; height: 40px";>Enrol Student</button></a><br /><br />
 					- or -<br /><br />
 					
-					<button style="width: 250px; height: 40px";><a href="StudentSearch">Existing Student Management</a></button>
+					<a href="StudentSearch"><button style="width: 250px; height: 40px";>Existing Student Management</button></a>
 				
 			</div>
 		</div>
