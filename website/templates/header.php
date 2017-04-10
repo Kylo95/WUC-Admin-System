@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,7 +11,7 @@
 				<img src="images/wucLogo.png" id="logo" />
 				<h1>Administration System</h1>
 			</div><div id="headerRight">
-				<?php if(isset($_SESSION['user'])) echo('<button style="width: 80px; height: 30px;"><a href="logout">Logout</button></a>'); ?>
+				<?php if(isset($_SESSION['user'])) echo('<a href="logout"><button style="width: 80px; height: 30px;">Logout</button></a>'); ?>
 			</div>
 		</header>
 		<?php if (isset($_SESSION['priv']) && $_SESSION['priv'] == 2){ ?>
