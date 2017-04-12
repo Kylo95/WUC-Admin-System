@@ -3,7 +3,7 @@
 				<br />
 				<h3>Welcome!</h3>
 				<br />
-				<p>Here is some information about the system and how you are able to use it.</p>
+				<p>You have been logged in successfully, click on one of the descriptive<br />buttons to the left of your screen to use the system.</p>
 			</div>
 		</div>
 	</body>

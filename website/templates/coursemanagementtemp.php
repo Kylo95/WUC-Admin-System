@@ -1,4 +1,3 @@
-
 			<div id="dynamicBox" style="width: 648px; height: 480px;">
 				<br />
 				<br />
@@ -6,10 +5,10 @@
 				<br />
 				
 					<br />
-					<button style="width: 250px; height: 40px";><a href="addcourse">Add a New Course</a></button><br /><br />
+					<a href="ManageCourse"><button style="width: 250px; height: 40px";>Manage Courses</button></a><br /><br />
 					- or -<br /><br />
 					
-					<button style="width: 250px; height: 40px";><a href="assignmoduletocourse">Add/Delete Modules</a></button>
+					<a href="ManageModule"><button style="width: 250px; height: 40px";>Manage Course Modules</button></a>
 				
 			</div>
 		</div>

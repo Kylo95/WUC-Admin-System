@@ -1,5 +1,7 @@
 <?php
-unset($_SESSION['priv']);
-session_write_close();
-require'../templates/hometemp.php';
+	unset($_SESSION['priv']);
+	unset($_SESSION['user']);
+	header('Location: home');
+	exit();
+	//require'../templates/hometemp.php';
 ?>

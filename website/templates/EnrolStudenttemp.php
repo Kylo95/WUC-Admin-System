@@ -96,18 +96,7 @@
 </html>
 <?php
 
-
 	if (isset($_POST['submit'])) {
-		
-	 $grades = $pdo->prepare('INSERT INTO students (entry_qualifications) 
-							   VALUES (:qualifications)');
-	$criteria = [
-			'qualifications' => $_POST['myList'],$_POST['myList1'],$_POST['myList2'],
-	
-		
-		];
-			
-		$grades->execute($criteria);
 
 		$stmt = $pdo->prepare('INSERT INTO students (firstname, surname, term_address_line1, term_address_line2, term_address_postcode, term_address_county, home_address_line1, home_address_line2, home_address_postcode, home_address_county, telephone_number, email_address, course_code,  student_status, personal_tutor ) 
 							   VALUES (:firstname, :surname, :term_address_line1, :term_address_line2, :term_address_postcode, :term_address_county, :home_address_line1, :home_address_line2, :home_address_postcode, :home_address_county, :telephone_number, :email_address, :course_code,  :student_status, :personal_tutor )');
